@@ -10,7 +10,7 @@
 - name: omego | setup virtualenv
   become: yes
   pip:
-    name: omego
+    name: https://github.com/manics/omego/archive/db-check.zip
     state: present
     version: "{{ omero_omego_version | default(omit) }}"
     virtualenv: "{{ omero_common_basedir }}/omego"
